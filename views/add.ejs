@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+    <title>Hello, world!</title>
+</head>
+<body class="addBody">
+<div class="container conAdd" id="root">
+    <div class="modal fade" id="man" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add new object</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">name</label>
+                        <input v-model="man.name" type="text" class="form-control" >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">price</label>
+                        <input  v-model="man.price"type="text" class="form-control" >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">img url</label>
+                        <input  v-model="man.img"type="text" class="form-control" >
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button @click="addMan"type="button" class="btn btn-primary">add to the market</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="woman" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add new object</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">name</label>
+                        <input v-model="woman.name"type="text" class="form-control" >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">price</label>
+                        <input v-model="woman.price"type="text" class="form-control" >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">img url</label>
+                        <input v-model="woman.img"type="text" class="form-control" >
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button @click="addWoman"type="button" class="btn btn-primary">add to the market</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="computer" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add new object</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">name</label>
+                        <input v-model="computer.name"type="text" class="form-control" >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">price</label>
+                        <input v-model="computer.price"type="text" class="form-control" >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">img url</label>
+                        <input v-model="computer.img" type="text" class="form-control" >
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button @click="addComputer"type="button" class="btn btn-primary">add to the market</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="home" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add new object</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">name</label>
+                        <input v-model="home.name"type="text" class="form-control" >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">price</label>
+                        <input v-model="home.price"type="text" class="form-control" >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">img url</label>
+                        <input v-model="home.img"type="text" class="form-control" >
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button @click="addHome"type="button" class="btn btn-primary">add to the market</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="phones" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add new object</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">name</label>
+                        <input v-model="phone.name"type="text" class="form-control" >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">price</label>
+                        <input v-model="phone.price"type="text" class="form-control" >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">img url</label>
+                        <input v-model="phone.img"type="text" class="form-control" >
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button @click="addPhone"type="button" class="btn btn-primary">add to the market</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="toys" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add new object</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">name</label>
+                        <input type="text" class="form-control" >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">price</label>
+                        <input type="text" class="form-control" >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">img url</label>
+                        <input type="text" class="form-control" >
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">add to the market</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="watches" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add new object</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">name</label>
+                        <input type="text" class="form-control" >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">price</label>
+                        <input type="text" class="form-control" >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">img url</label>
+                        <input type="text" class="form-control" >
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">add to the market</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="bags" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add new object</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">name</label>
+                        <input v-model="bag.name"type="text" class="form-control" >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">price</label>
+                        <input v-model="bag.price"type="text" class="form-control" >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">img url</label>
+                        <input v-model="bag.img"type="text" class="form-control" >
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button @click="addBag"type="button" class="btn btn-primary">add to the market</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#woman">
+        woman
+    </button>
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#man">
+        Man
+    </button>
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#bags">
+        Bags
+    </button>
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#computer">
+    computer
+    </button>
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#home">
+    home
+    </button>
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#phones">
+    phones
+    </button>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    var app = new Vue({
+        el:'#root',
+        data: {
+            woman: {
+                name: "",
+                price: 0,
+                img: ""
+            },
+            man: {
+                name: "",
+                price: 0,
+                img: ""
+            },
+            bag: {
+                name: "",
+                price: 0,
+                img: ""
+            } ,
+            computer: {
+                name: "",
+                price: 0,
+                img: ""
+            },
+            home: {
+                name: "",
+                price: 0,
+                img: ""
+            },
+           phone: {
+                name: "",
+                price: 0,
+                img: ""
+            }
+        },
+            methods: {
+                addWoman: function () {
+                    axios.post('/api/woman', {woman: this.woman}).then(function (response) {
+                      if(response.data.isSuccess){
+                        axios.get('/api/feed').then(function (response) {
+                            app.feedBacks= response.data;
+
+                        })
+                        $('#woman').modal('hide')
+                      }
+                    }).catch(function (error) {
+                    })
+                },
+                addMan: function () {
+                    axios.post('/api/man', {man: this.man}).then(function (response) {
+                      if(response.data.isSuccess){
+                        axios.get('/api/feed').then(function (response) {
+                            app.feedBacks= response.data;
+
+                        })
+                        $('#man').modal('hide')
+                      }
+                    }).catch(function (error) {
+                    })
+                },
+                addBag: function () {
+                    axios.post('/api/bag', {bags:this.bag}).then(function (response) {
+                      if(response.data.isSuccess){
+                        axios.get('/api/feed').then(function (response) {
+                            app.feedBacks= response.data;
+
+                        })
+                        $('#bags').modal('hide')
+                      }
+                    }).catch(function (error) {
+                    })
+                },
+                addComputer: function () {
+                    axios.post('/api/computer', {computers:this.computer}).then(function (response) {
+                      if(response.data.isSuccess){
+                        axios.get('/api/feed').then(function (response) {
+                            app.feedBacks= response.data;
+
+                        })
+                        $('#computer').modal('hide')
+                      }
+                    }).catch(function (error) {
+                    })
+                } ,
+                addHome: function () {
+                    axios.post('/api/home', {homes: this.home}).then(function (response) {
+                      if(response.data.isSuccess){
+                        axios.get('/api/feed').then(function (response) {
+                            app.feedBacks= response.data;
+
+                        })
+                        $('#home').modal('hide')
+                      }
+                    }).catch(function (error) {
+                    })
+                },
+                addPhone: function () {
+                    axios.post('/api/phone', {phones: this.phone}).then(function (response) {
+                      if(response.data.isSuccess){
+                        axios.get('/api/feed').then(function (response) {
+                            app.feedBacks= response.data;
+
+                        })
+                        $('#phones').modal('hide')
+                      }
+                    }).catch(function (error) {
+                    })
+                }
+            }});
+</script>
+</body>
+</html>

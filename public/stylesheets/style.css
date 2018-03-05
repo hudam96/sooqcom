@@ -1,0 +1,131 @@
+body {
+  font-family: 'Delius', cursive;
+  font-family: 'Vollkorn SC', serif;
+    background-color: seashell;
+
+}
+
+.header {
+height: 30px;
+  padding-right: 50px;
+  background-color:#00b3b3 ;
+  font-size: 17px;
+
+}
+a {
+  color: inherit;
+}
+.nav , .con2
+{
+  background-color:seashell;
+}
+.navbar-brand {
+  font-size: 50px;
+  font-family: 'Aref Ruqaa', serif;
+}
+#span1 {
+  color:#00b3b3;
+;
+}
+#span2 {
+  color: #b30000;
+}
+
+.new{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.row2 {
+  padding-bottom: 10px;
+}
+.imgSize{
+  height:250px;
+
+}
+.end
+{
+  height: 500px;
+  background-color: seashell;
+}
+
+
+.content {
+  display: flex;
+  padding: 0 -8px;
+
+}
+#h3 {
+  font-size: 100px;
+}
+#p1 {
+  font-size:40px;
+}
+.addBody {
+    background-color:whitesmoke;
+}
+.conAdd {
+    margin: 100px;
+}
+.nav2 {
+  height: 60px;
+  background-color:seashell;
+  font-size:20px;
+
+
+
+}
+.caro1 {
+  height: 300px;
+  width: 600px;
+  background-color: rgba(134, 89, 45,0.5);
+  font-family: 'Coiny', cursive;
+  font-family: 'Alfa Slab One', cursive;
+  letter-spacing: 12px;
+}
+.carol2{
+    font-family: 'Coiny', cursive;
+    font-family: 'Alfa Slab One', cursive;
+    width: 700px;
+    height: 100px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.col3{
+  padding-left: 40px;
+}
+.btn {
+  background-color:#00b3b3;
+}
+#objectImg {
+  width: 200px;
+  height: 300px;
+}
+.col4 {
+  padding: 20px;
+}
+.end{
+    padding-top: 100px;
+    font-family: 'Heebo', sans-serif;
+}
+
+.end i {
+    color: #b30000;
+}
+.end p {
+    font-size: 15px;
+    font-weight: bold;
+    color: dimgray;
+}
+
+#copyRight {
+    color: dimgray;
+}
+.con3 .col 
+{
+    background-color: whitesmoke;
+    padding: 50px;
+}
+.con3 .row {
+    padding-top: 30px;
+
+}
